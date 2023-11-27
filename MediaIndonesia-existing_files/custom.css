@@ -1,0 +1,151 @@
+/*
+    UPDATE:
+    - skinny background
+    - banner di kanan & kiri logo
+    - Slot e-paper diatas berita terkini
+*/
+
+/*SKINNY*/
+body.skin-active{
+    position: relative;
+}
+body.skin-active::before{
+    content: "";
+    width: 1270px;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 4;
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    /*box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);*/
+}
+
+body.skin-active #contents{
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+}
+body.skin-active #contents *{
+    pointer-events: auto;
+}
+
+.skin-wrapper{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.skin-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+body.skin-active .skin-wrapper{
+    display: block;
+}
+
+.skin-banner-link{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: 0;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+/*BANNER SAMPING LOGO*/
+.side-banner{
+    position: absolute;
+    top: 0;
+    width: 404px;
+    height: 145px;
+    z-index: 0;
+}
+.side-banner.left{
+    left: 0;
+}
+.side-banner.right{
+    right: 0;
+}
+
+.header .col.s1{
+    position: relative;
+    z-index: 2;
+}
+
+/*E-PAPER*/
+
+.widget .bx-viewport {
+    height: auto !important;
+}
+
+.widget .bx-wrapper .bx-controls-direction a {
+    top: 32%;
+    transform: translateY(-50%);
+}
+
+.widget .more {
+    margin-top: 50px;
+}
+
+.epaper-img{
+    width: 100%;
+    background: #f4f4f4;
+}
+.epaper-img a{
+    display: block;
+   /* width: 100%;*/
+}
+.epaper-img img{
+    width: 100%;
+}
+
+.epaper-img .text-block {
+    padding: 20px;
+}
+
+.epaper-img .paper-wrapper a {
+    width: 350px;
+    bottom: 20%;
+}
+
+.article-block-big.v2 li{
+    width: calc((100% - 20px) / 2);
+    float: left;
+    margin-right: 20px;
+}
+.article-block-big.v2 li:nth-child(even){
+    margin-right: 0;
+}
+.article-block-big.v2 li .img-container{
+    margin-bottom : 8px; width: 100%; border: 1px solid #dedede; height:160px; margin-bottom: 10px;
+}
+.article-block-big.v2 li .img-container img{
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
